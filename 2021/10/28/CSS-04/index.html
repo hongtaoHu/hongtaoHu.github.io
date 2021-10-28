@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="学习心得, hongtao">
-    <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
+    <meta name="keywords" content="盒子模型, hongtao">
+    <meta name="description" content="1.css盒子模型小技巧补充1.1 border的三角形原理当我们加大边框并且各个颜色不一样时，我们先来看看border的表现形式。
+123456789#box&amp;#123;  width:100px;  height:100px;  bac">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>学习心得 | hongtao</title>
+    <title>盒子模型 | hongtao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">学习心得</h1>
+                    <h1 class="description center-align post-title">盒子模型</h1>
                 </div>
             </div>
         </div>
@@ -428,13 +429,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/css%E6%80%BB%E7%BB%93/">
-                                <span class="chip bg-color">css总结</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -446,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-27
+                    2021-10-28
                 </div>
                 
 
@@ -467,10 +464,287 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">	<span class="comment">/*一、行内样式</span></span><br><span class="line"><span class="comment">		优点：优先级最高</span></span><br><span class="line"><span class="comment">		缺点：只能控制单个标签、容易让代码变得混乱、不易于阅读</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	二、内联样式</span></span><br><span class="line"><span class="comment">		优点：书写方便、适合写demo</span></span><br><span class="line"><span class="comment">		缺点：不同同时控制多个页面</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	三、外联样式</span></span><br><span class="line"><span class="comment">		优点：可以同时控制多个页面、适合写项目</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	三种引入方式的优先级根据就近原则排列*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="comment">/*字体大小、最小12px、最大8000、默认16px*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">font-weight</span>: bold;</span><br><span class="line">	<span class="comment">/*字体加粗*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">font-style</span>: oblique;</span><br><span class="line">	<span class="comment">/*字体倾斜*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">&#x27;宋体&#x27;</span>;</span><br><span class="line">	<span class="comment">/*字体家族*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">font</span>: oblique bold <span class="number">20px</span> <span class="string">&#x27;宋体&#x27;</span>;</span><br><span class="line">	<span class="comment">/*字体简写：style  weight  size  family*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">color</span>: red;</span><br><span class="line">	<span class="comment">/*字体颜色*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="comment">/*行高：可以单行文本上下居中，前提是行高必须和高度保持一致*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">letter-spacing</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="comment">/*字符间距：可以为负值*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="comment">/*文本居中*/</span></span><br><span class="line">	<span class="attribute">text-align</span>: right;</span><br><span class="line">	<span class="comment">/*文本右对齐*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="comment">/*首行缩进    px = 一个像素   em = 一个字符*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">text-decoration</span>: underline;</span><br><span class="line">	<span class="comment">/*文本修饰：</span></span><br><span class="line"><span class="comment">	underline    下划线  </span></span><br><span class="line"><span class="comment">	line-through 中划线   </span></span><br><span class="line"><span class="comment">	overline     上划线  </span></span><br><span class="line"><span class="comment">	none         清除文本修饰*/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*基本选择器：</span></span><br><span class="line"><span class="comment">		通配符选择器：可以控制页面所有标签</span></span><br><span class="line"><span class="comment">		标签选择器：直接写标签名</span></span><br><span class="line"><span class="comment">		类名选择器：多个标签可以共用一个类名，一个标签可以拥有多个类名</span></span><br><span class="line"><span class="comment">		ID选择器：同一个网页不能出现相同ID，具有唯一性</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	基本选择器优先级顺序：</span></span><br><span class="line"><span class="comment">		通配符&lt;标签&lt;类名&lt;ID</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	高级选择器：</span></span><br><span class="line"><span class="comment">		后代选择器</span></span><br><span class="line"><span class="comment">		直接后代选择器</span></span><br><span class="line"><span class="comment">		并集选择器*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">display</span>: inline;</span><br><span class="line">	<span class="comment">/*转换成行内元素*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="comment">/*转换成块元素*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">display</span>: inline-block;</span><br><span class="line">	<span class="comment">/*转换成行内块元素*/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*伪类选择器：hover    控制鼠标悬停其上的元素*/</span></span><br></pre></td></tr></table></figure>
+                <h1 id="1-css盒子模型小技巧补充"><a href="#1-css盒子模型小技巧补充" class="headerlink" title="1.css盒子模型小技巧补充"></a>1.css盒子模型小技巧补充</h1><h3 id="1-1-border的三角形原理"><a href="#1-1-border的三角形原理" class="headerlink" title="1.1 border的三角形原理"></a>1.1 border的三角形原理</h3><p>当我们加大边框并且各个颜色不一样时，我们先来看看border的表现形式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#box&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background:yellow;</span><br><span class="line">  border-top: 20px solid red;</span><br><span class="line">  border-right:20px solid black;</span><br><span class="line">  border-bottom:20px solid green;</span><br><span class="line">  border-left:20px solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="media%5Cborder1.png"></p>
+<p>观察上图可以发现，border表现为梯形。当减小box的宽高时，会发生如下变化：</p>
+<p><img src="media%5Cborder2.png"></p>
+<p>从上图很容易看出，当box宽度降低到很小，也就是border的梯形的上边降到很小。所以想一想，当这一值降到0时，border就变成了三角形。如下图：</p>
+<p><img src="media%5Cfour.png"></p>
+<p>所以我们就可以通过将元素宽高设置为0，而通过控制border来得到想要的三角形了。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>将不需要方向的border设置为透明（transparent），就可以用来实现三角形了。比如想实现下三角形，就将border-left，border-bottom，border-right设置为transparent即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#box&#123;</span><br><span class="line">  width:0px;</span><br><span class="line">  height:0px;</span><br><span class="line">  border-top: 20px solid red;</span><br><span class="line">  border-right:20px solid transparent;</span><br><span class="line">  border-bottom:20px solid transparent;</span><br><span class="line">  border-left:20px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="media%5Csanjiao.png"></p>
+<h3 id="1-2-圆角边框-CSS3"><a href="#1-2-圆角边框-CSS3" class="headerlink" title="1.2 圆角边框(CSS3)"></a>1.2 圆角边框(CSS3)</h3><p>从此以后，我们的世界不只有矩形。radius 半径（距离）</p>
+<p>允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个(椭)圆与边框的交集形成圆角效果。</p>
+<p><img src="media%5Cborder-radius-sh.png"></p>
+<p>语法格式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: 左上角  右上角  右下角  左下角;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>其中每一个值可以为 数值或百分比的形式。 </p>
+</li>
+<li><p>技巧： 让一个正方形  变成圆圈 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius: 50%;</span><br></pre></td></tr></table></figure></li>
+<li><p>以上效果图矩形的圆角， 就不要用 百分比了，因为百分比会是表示高度和宽度的一半。</p>
+</li>
+<li><p>而我们这里矩形就只用 用 高度的一半就好了。精确单位。</p>
+</li>
+</ul>
+<p>演示例子风车：</p>
+<img src="media\fengche.jpg">
+
+<h3 id="1-3-外边距合并"><a href="#1-3-外边距合并" class="headerlink" title="1.3 外边距合并"></a>1.3 外边距合并</h3><p>使用margin定义块元素的垂直外边距时，可能会出现外边距的合并。</p>
+<h4 id="1-3-1-相邻块元素垂直外边距的合并"><a href="#1-3-1-相邻块元素垂直外边距的合并" class="headerlink" title="1.3.1 相邻块元素垂直外边距的合并"></a>1.3.1 相邻块元素垂直外边距的合并</h4><p>当上下相邻的两个块元素相遇时，如果上面的元素有下外边距margin-bottom，下面的元素有上外边距margin-top，则他们之间的垂直间距不是margin-bottom与margin-top之和，而是两者中的较大者。这种现象被称为相邻块元素垂直外边距的合并（也称外边距塌陷）。</p>
+<img src="media\www.png" />
+
+<p>解决方案：  避免就好了。</p>
+<h4 id="1-3-2-嵌套块元素垂直外边距的合并"><a href="#1-3-2-嵌套块元素垂直外边距的合并" class="headerlink" title="1.3.2 嵌套块元素垂直外边距的合并"></a>1.3.2 嵌套块元素垂直外边距的合并</h4><p>对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为0，也会发生合并。</p>
+<img src="media\n.png" />
+
+<p>解决方案：</p>
+<ol>
+<li>可以为父元素定义1像素的上边框或上内边距。</li>
+<li>可以为父元素添加overflow:hidden(overflow 属性规定当内容溢出元素框时发生的事情）。</li>
+</ol>
+<h1 id="2-插入图片和背景图片区别"><a href="#2-插入图片和背景图片区别" class="headerlink" title="2.  插入图片和背景图片区别"></a>2.  插入图片和背景图片区别</h1><ol>
+<li>插入图片 我们用的最多 比如产品展示类  移动位置只能靠盒模型 padding margin</li>
+<li>背景图片我们一般用于小图标背景 或者 超大背景图片  背景图片 只能通过  background-position</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;  </span><br><span class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;<span class="comment">/* 插入图片更改大小 width 和 height */</span></span><br><span class="line">	<span class="attribute">height</span>: <span class="number">210px</span>;</span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">30px</span>;  <span class="comment">/* 插入图片更改位置 可以用margin 或padding  盒模型 */</span></span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">50px</span>; <span class="comment">/* 插入当图片也是一个盒子 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#fff</span> <span class="built_in">url</span>(<span class="string">images/sun.jpg</span>) no-repeat;</span><br><span class="line">	<span class="attribute">background-position</span>: <span class="number">30px</span> <span class="number">50px</span>; <span class="comment">/* 背景图片更改位置 我用 background-position */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="comment">/*背景颜色*/</span></span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">图片路径</span>);</span><br><span class="line">	<span class="comment">/*背景图片*/</span></span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="comment">/*背景平铺方式：不平铺*/</span></span><br><span class="line">	<span class="attribute">background-position</span>: <span class="number">0px</span> <span class="number">0px</span>;</span><br><span class="line">	<span class="comment">/*背景定位*/</span></span><br><span class="line">	<span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">	<span class="comment">/*背景附着*/</span></span><br><span class="line">	<span class="attribute">background-size</span>: contain;</span><br><span class="line">	<span class="comment">/*背景大小*/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*为什么要使用精灵图？*/</span></span><br><span class="line">	<span class="comment">/*为了减少向发送和接收的请求次数、提高页面的加载速度*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">	<span class="comment">/*边框：宽度、风格、颜色*/</span></span><br><span class="line">	<span class="attribute">border-top</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">	<span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">	<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">	<span class="attribute">border-left</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span><br><span class="line">	<span class="comment">/*单独指定某一个边*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">padding-top</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="comment">/*上内边距：内容和边框之间的距离*/</span></span><br><span class="line">	<span class="comment">/*缺点：会撑大盒子*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">30px</span> <span class="number">40px</span> <span class="number">50px</span>;</span><br><span class="line">	<span class="comment">/*内边距简写：上右下左*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="comment">/*外边距：可以改变盒子的位置*/</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">30px</span> <span class="number">40px</span> <span class="number">50px</span>;</span><br><span class="line">	<span class="comment">/*外边距简写：上右下左*/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*盒子模型的组成：content内容、padding内边距、border边框、margin外边距*/</span></span><br><span class="line">		<span class="comment">/*content：内容由宽高组成</span></span><br><span class="line"><span class="comment">		padding: 内容和边框之间的距离</span></span><br><span class="line"><span class="comment">		border: 盒子的边框</span></span><br><span class="line"><span class="comment">		margin: 盒子以外的距离*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="3-盒子模型布局稳定性"><a href="#3-盒子模型布局稳定性" class="headerlink" title="3. 盒子模型布局稳定性"></a>3. 盒子模型布局稳定性</h1><p>开始学习盒子模型，同学们最大的困惑就是， 分不清内外边距的使用，什么情况下使用内边距，什么情况下使用外边距？</p>
+<p>答案是：  其实他们大部分情况下是可以混用的。  就是说，你用内边距也可以，用外边距也可以。 你觉得哪个方便，就用哪个。</p>
+<p>但是，总有一个最好用的吧，我们根据稳定性来分，建议如下：</p>
+<p>按照 优先使用  宽度 （width）  其次 使用内边距（padding）    再次  外边距（margin）。   </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width &gt;  padding  &gt;   margin   </span><br></pre></td></tr></table></figure>
+
+<p>原因：</p>
+<ol>
+<li>margin 会有外边距合并 还有 ie6下面margin 加倍的bug（讨厌）所以最后使用。</li>
+<li>padding  会影响盒子大小， 需要进行加减计算（麻烦） 其次使用。</li>
+<li>width   没有问题（嗨皮）我们经常使用宽度剩余法 高度剩余法来做。</li>
+</ol>
+<h1 id="4-CSS盒模型大小计算"><a href="#4-CSS盒模型大小计算" class="headerlink" title="4. CSS盒模型大小计算"></a>4. CSS盒模型大小计算</h1><p>CSS3中可以通过box-sizing 来指定盒模型，即可指定为content-box、border-box，这样我们计算盒子大小的方式就发生了改变。</p>
+<p>可以分成两种情况：</p>
+<ul>
+<li><p>1、box-sizing: content-box 盒子大小为 content (width/heigth)+ padding + border, content-box:此值为其默认值，其让元素维持W3C的标准Box Mode。</p>
+</li>
+<li><p>2、box-sizing: border-box 盒子大小为 content (width/heigth) 就是说  padding 和 border 是包含到width里面的。</p>
+</li>
+</ul>
+<h4 id="我可以"><a href="#我可以" class="headerlink" title="*我可以"></a>*我可以</h4><p><strong>谈谈你对盒子模型的理解</strong></p>
+<ul>
+<li><p>盒子模型的概念</p>
+<p>就是把HTML页面中的布局元素看作是一个矩形的盒子，也就是一个盛装内容的容器。</p>
+</li>
+<li><p>盒子模型的组成<br>一个元素占有空间的大小由几个部分构成，其中包括</p>
+<p>元素的内容（content），<br>元素的内边距（padding），内容与边框之间的距离<br>元素的边框（border），<br>元素的外边距（margin），边框与外部元素之间的距离<br>四个部分，这四个部分一起构成了盒子模型。</p>
+</li>
+<li><p>盒子模型的分类</p>
+<p>盒模型的分类（最重要的部分）<br>盒模型分为 ： W3C标准盒子 、IE盒子</p>
+<p><strong>1.W3C标准盒子（content-box）：</strong></p>
+<p>  在这种盒模型下，我们所说的元素的 width ，实际上只包含 content</p>
+<blockquote>
+<p>盒子总宽度 = margin + border + padding + width</p>
+</blockquote>
+<p><strong>2.IE盒子（border-box）：</strong></p>
+<p>又称怪异盒模型（边框盒子），是指块元素box-sizing属性为border-box的盒模型。</p>
+<p>  <strong>在这种盒模型下，我们所说的元素的</strong> <strong>width ，实际上包含了 content + padding + border</strong></p>
+<blockquote>
+<p>盒子总宽度= margin + width</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="5-浮动-float"><a href="#5-浮动-float" class="headerlink" title="5. 浮动(float)"></a>5. 浮动(float)</h1><h2 id="5-1-CSS-布局的三种机制"><a href="#5-1-CSS-布局的三种机制" class="headerlink" title="5.1 CSS 布局的三种机制"></a>5.1 CSS 布局的三种机制</h2><p>网页布局的核心——就是<strong>用 CSS 来摆放盒子</strong>。CSS 提供了 <strong>3 种机制</strong>来设置盒子的摆放位置，分别是<strong>普通流</strong>（标准流）、<strong>浮动</strong>和<strong>定位</strong>，其中： </p>
+<ol>
+<li><p><strong>普通流</strong>（标准流）</p>
+<ul>
+<li><strong>块级元素</strong>会独占一行，<strong>从上向下</strong>顺序排列；<ul>
+<li>常用元素：div、hr、p、h1~h6、ul、ol、dl、form、table</li>
+</ul>
+</li>
+<li><strong>行内元素</strong>会按照顺序，<strong>从左到右</strong>顺序排列，碰到父元素边缘则自动换行；<ul>
+<li>常用元素：span、a、i、em等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>浮动</strong></p>
+<ul>
+<li>让盒子从普通流中<strong>浮</strong>起来,主要作用让多个块级盒子一行显示。</li>
+</ul>
+</li>
+<li><p><strong>定位</strong></p>
+<ul>
+<li>将盒子<strong>定</strong>在浏览器的某一个<strong>位</strong>置——CSS 离不开定位，特别是后面的 js 特效。</li>
+</ul>
+</li>
+</ol>
+<p>总结：html当中有一个相当重要的概念，标准流或者普通流。普通流实际上就是一个网页内标签元素正常从上到下，从左到右排列顺序的意思，比如块级元素会独占一行，行内元素会按顺序依次前后排列；按照这种大前提的布局排列之下绝对不会出现例外的情况叫做普通流布局。</p>
+<h2 id="5-2-为什么需要浮动？"><a href="#5-2-为什么需要浮动？" class="headerlink" title="5.2 为什么需要浮动？"></a>5.2 为什么需要浮动？</h2><img src="media/p.png"/>
+
+<p>思考：那么如何实现盒子的左右对齐？</p>
+<p><img src="media/left-right.png"></p>
+<h2 id="5-3-什么是浮动？"><a href="#5-3-什么是浮动？" class="headerlink" title="5.3 什么是浮动？"></a>5.3 什么是浮动？</h2><p>元素的浮动是指设置了浮动属性的元素会<strong>脱离标准普通流</strong>的控制，<strong>移动到其父元素中指定位置</strong>的过程。</p>
+<p>在CSS中，通过float属性来定义浮动，其基本语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;float:属性值;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>元素向左浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>元素向右浮动</td>
+</tr>
+<tr>
+<td>none</td>
+<td>元素不浮动（默认值）</td>
+</tr>
+</tbody></table>
+<h2 id="5-4浮动详细内幕特性"><a href="#5-4浮动详细内幕特性" class="headerlink" title="5.4浮动详细内幕特性"></a>5.4浮动详细内幕特性</h2><p>浮动脱离标准流，不占位置，会影响标准流。浮动只有左右浮动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">浮动首先创建包含块的概念（包裹）。就是说， 浮动的元素总是找理它最近的父级元素对齐。但是不会超出内边距的范围。 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+   <img src="media/one.jpg" width="500" /> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">浮动的元素排列位置，跟上一个元素（块级）有关系。如果上一个元素有浮动，则A元素顶部会和上一个元素的顶部对齐；如果上一个元素是标准流，则A元素的顶部会和上一个元素的底部对齐。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  <img src="media/two.jpg" width="400" />
+
+<ul>
+<li>由2可以推断出，一个父盒子里面的子盒子，如果其中一个子级有浮动的，则其他子级都需要浮动。这样才能一行对齐显示。</li>
+<li>元素添加浮动后，元素会具有行内块元素的特性。（但是行内块元素不脱标，但是浮动的元素脱标,并且display为block）元素的大小完全取决于定义的大小或者默认的内容多少，浮动根据元素书写的位置来显示相应的浮动。</li>
+</ul>
+<p>**总结： **</p>
+<p>浮动的目的就是为了让多个块级元素同一行上显示。</p>
+<p>float： </p>
+<ul>
+<li>加了浮动的元素盒子是浮起来的，漂浮在其他的标准流盒子上面。</li>
+<li>加了浮动的盒子，不占位置的，它浮起来了，它原来的位置漏 给了标准流的盒子。</li>
+<li>特别注意，首先，浮动是脱标的，会影响下面的标准流元素，我们需要给浮动的元素添加一个标准流的父亲，这样，最大化的减小了对其他标准流的影响， 其次，特别注意浮动可以使元素显示模式体现为行内块特性。</li>
+</ul>
+<h4 id="我可以-1"><a href="#我可以-1" class="headerlink" title="*我可以"></a>*我可以</h4><p><strong>父盒子浮动，父盒子包含有多个子盒子，问子盒子是否浮动。</strong></p>
+<ul>
+<li>不浮动，所有关于盒子的、定位的、布局的属性都不能继承。</li>
+</ul>
+<h1 id="6-清除浮动"><a href="#6-清除浮动" class="headerlink" title="6. 清除浮动"></a>6. 清除浮动</h1><h2 id="6-1为什么要清除浮动"><a href="#6-1为什么要清除浮动" class="headerlink" title="6.1为什么要清除浮动"></a>6.1为什么要清除浮动</h2><p>我们前面说过，浮动本质是用来做一些文字混排效果的，但是被我们拿来做布局用，则会有很多的问题出现， 但是，你不能说浮动不好 。  </p>
+<p>由于浮动元素不再占用原文档流的位置，所以它会对后面的元素排版产生影响，为了解决这些问题，此时就需要在该元素中清除浮动。</p>
+<p>准确地说，并不是清除浮动，而是<strong>清除浮动后造成的影响</strong></p>
+<p>如果浮动一开始就是一个美丽的错误，那么请用正确的方法挽救它。</p>
+<h2 id="6-2-清除浮动本质"><a href="#6-2-清除浮动本质" class="headerlink" title="6.2 清除浮动本质"></a>6.2 清除浮动本质</h2><p>清除浮动主要为了解决父级元素因为子级浮动引起内部高度为0 的问题。</p>
+<img src="media/n.jpg" />
+
+<img src="C:/Users/41616/Desktop/商丘学院/xu/04-css/课件/media/no.jpg" />
+
+
+
+<h2 id="6-3-清除浮动的方法"><a href="#6-3-清除浮动的方法" class="headerlink" title="6.3 清除浮动的方法"></a>6.3 清除浮动的方法</h2><p>其实本质叫做闭合浮动更好一些, 记住，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口不让他们出来影响其他元素。</p>
+<p>在CSS中，clear属性用于清除浮动，其基本语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;clear:属性值;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>不允许左侧有浮动元素（清除左侧浮动的影响）</td>
+</tr>
+<tr>
+<td>right</td>
+<td>不允许右侧有浮动元素（清除右侧浮动的影响）</td>
+</tr>
+<tr>
+<td>both</td>
+<td>同时清除左右两侧浮动的影响</td>
+</tr>
+</tbody></table>
+<h3 id="6-3-1-额外标签法"><a href="#6-3-1-额外标签法" class="headerlink" title="6.3.1 额外标签法"></a>6.3.1 额外标签法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">”clear:both”</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>，或则其他标签br等亦可。</span><br></pre></td></tr></table></figure>
+
+<p>优点： 通俗易懂，书写方便</p>
+<p>缺点： 添加许多无意义的标签，结构化较差。  我只能说，w3c你推荐的方法我不接受，你不值得拥有。。。</p>
+<h3 id="6-3-2-父级添加overflow属性方法"><a href="#6-3-2-父级添加overflow属性方法" class="headerlink" title="6.3.2 父级添加overflow属性方法"></a>6.3.2 父级添加overflow属性方法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可以给父级添加： <span class="attribute">overflow</span>为 hidden|<span class="attribute">auto</span>|scroll  都可以实现。</span><br></pre></td></tr></table></figure>
+
+<p>优点：  代码简洁</p>
+<p>缺点：  内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素。</p>
+<h3 id="6-3-3-使用after伪元素清除浮动"><a href="#6-3-3-使用after伪元素清除浮动" class="headerlink" title="6.3.3 使用after伪元素清除浮动"></a>6.3.3 使用after伪元素清除浮动</h3><p><strong>:after 方式为空元素的升级版，好处是不用单独加标签了</strong> </p>
+<p>使用方法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.clearfix</span>:after &#123;  </span><br><span class="line">     content: <span class="string">&quot;.&quot;</span>; </span><br><span class="line">     <span class="attribute">display</span>: block; </span><br><span class="line">     <span class="attribute">height</span>: <span class="number">0</span>; </span><br><span class="line">     <span class="attribute">clear</span>: both; </span><br><span class="line">     <span class="attribute">visibility</span>: hidden;  </span><br><span class="line">&#125;   </span><br><span class="line"></span><br><span class="line"> <span class="selector-class">.clearfix</span> &#123;*zoom: <span class="number">1</span>;&#125;   <span class="comment">/* IE6、7 专有 */</span></span><br></pre></td></tr></table></figure>
+
+<p>记忆法：code   hate   cv</p>
+<p>基本语法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zoom : normal | number </span><br></pre></td></tr></table></figure>
+
+<p>语法取值<br>normal  :默认值。使用对象的实际尺寸<br>number  : 百分数 | 无符号浮点实数。浮点实数值为1.0或百分数为100%时相当于此属性的 normal 值<br>使用说明<br>设置或检索对象的缩放比例。设置或更改一个已被呈递的对象的此属性值将导致环绕对象的内容重新流动。</p>
+<p>优点： 符合闭合浮动思想  结构语义化正确</p>
+<p>缺点： 由于IE6-7不支持:after，使用 zoom:1。</p>
+<p>代表网站： 百度、淘宝网、网易等</p>
+<h3 id="清除浮动总结"><a href="#清除浮动总结" class="headerlink" title="清除浮动总结"></a>清除浮动总结</h3><ol>
+<li>父级没高度</li>
+<li>子盒子浮动了</li>
+<li>影响下面布局了，我们就应该清除浮动了。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>清除浮动的方式</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>额外标签法（隔墙法）</td>
+<td align="left">通俗易懂，书写方便</td>
+<td align="left">添加许多无意义的标签，结构化较差。</td>
+</tr>
+<tr>
+<td>父级overflow:hidden;</td>
+<td align="left">书写简单</td>
+<td align="left">溢出隐藏</td>
+</tr>
+<tr>
+<td>父级after伪元素</td>
+<td align="left">结构语义化正确</td>
+<td align="left">由于IE6-7不支持:after，兼容性问题</td>
+</tr>
+</tbody></table>
+<h4 id="我可以-2"><a href="#我可以-2" class="headerlink" title="*我可以"></a>*我可以</h4><p><strong>为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？</strong></p>
+<ul>
+<li><p>浮动元素碰到包含它的边框或者浮动元素的边框停留。由于浮动元素不在文档流中，所以文档流的块框表现得就像浮动框不存在一样。浮动元素会漂浮在文档流的块框上。</p>
+</li>
+<li><p>浮动带来的问题：</p>
+<ul>
+<li><p>父元素的高度无法被撑开，影响与父元素同级的元素</p>
+</li>
+<li><p>与浮动元素同级的非浮动元素（内联元素）会跟随其后</p>
+</li>
+<li><p>若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构。</p>
+</li>
+</ul>
+</li>
+<li><p>清除浮动的方式：</p>
+<ul>
+<li>父级div定义height</li>
+<li>最后一个浮动元素后加空div标签 并添加样式clear:both。</li>
+<li>包含浮动元素的父标签添加样式overflow为hidden或auto。</li>
+<li>为父级添加伪元素</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -497,7 +771,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hongtaohu.github.io/2021/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">https://hongtaohu.github.io/2021/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="https://hongtaohu.github.io/2021/10/28/CSS-04/">https://hongtaohu.github.io/2021/10/28/CSS-04/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,11 +808,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/css%E6%80%BB%E7%BB%93/">
-                                    <span class="chip bg-color">css总结</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -708,9 +978,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/10/28/CSS-04/">
                     <div class="card-image">
@@ -728,9 +999,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -739,6 +1010,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -749,13 +1021,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/26/hello-world/">
+                <a href="/2021/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Hello">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="学习心得">
                         
-                        <span class="card-title">Hello</span>
+                        <span class="card-title">学习心得</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -766,7 +1038,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
                             </span>
                         <span class="publish-author">
                             
@@ -775,6 +1047,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/css%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">css总结</span>
+                    </a>
+                    
                 </div>
                 
             </div>
