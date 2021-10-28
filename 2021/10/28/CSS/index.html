@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="盒子模型, hongtao">
-    <meta name="description" content="
-1.css盒子模型小技巧补充1.1 border的三角形原理当我们加大边框并且各个颜色不一样时，我们先来看看border的表现形式。
+    <meta name="keywords" content="hongtao">
+    <meta name="description" content="1.css盒子模型小技巧补充
+1.1 border的三角形原理当我们加大边框并且各个颜色不一样时，我们先来看看border的表现形式。
 123456789#box&amp;#123;  width:100px;  height:100px;  ba">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>盒子模型 | hongtao</title>
+    <title>hongtao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">盒子模型</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -465,9 +465,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h1 id="1-css盒子模型小技巧补充"><a href="#1-css盒子模型小技巧补充" class="headerlink" title="1.css盒子模型小技巧补充"></a>1.css盒子模型小技巧补充</h1><h3 id="1-1-border的三角形原理"><a href="#1-1-border的三角形原理" class="headerlink" title="1.1 border的三角形原理"></a>1.1 border的三角形原理</h3><p>当我们加大边框并且各个颜色不一样时，我们先来看看border的表现形式。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#box&#123;</span><br><span class="line">  width:100px;</span><br><span class="line">  height:100px;</span><br><span class="line">  background:yellow;</span><br><span class="line">  border-top: 20px solid red;</span><br><span class="line">  border-right:20px solid black;</span><br><span class="line">  border-bottom:20px solid green;</span><br><span class="line">  border-left:20px solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <p>1.css盒子模型小技巧补充</p>
+<h3 id="1-1-border的三角形原理"><a href="#1-1-border的三角形原理" class="headerlink" title="1.1 border的三角形原理"></a>1.1 border的三角形原理</h3><p>当我们加大边框并且各个颜色不一样时，我们先来看看border的表现形式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>:yellow;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">20px</span> solid red;</span><br><span class="line">  <span class="attribute">border-right</span>:<span class="number">20px</span> solid black;</span><br><span class="line">  <span class="attribute">border-bottom</span>:<span class="number">20px</span> solid green;</span><br><span class="line">  <span class="attribute">border-left</span>:<span class="number">20px</span> solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="media%5Cborder1.png"></p>
 <p>观察上图可以发现，border表现为梯形。当减小box的宽高时，会发生如下变化：</p>
@@ -476,7 +476,7 @@
 <p><img src="media%5Cfour.png"></p>
 <p>所以我们就可以通过将元素宽高设置为0，而通过控制border来得到想要的三角形了。</p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>将不需要方向的border设置为透明（transparent），就可以用来实现三角形了。比如想实现下三角形，就将border-left，border-bottom，border-right设置为transparent即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#box&#123;</span><br><span class="line">  width:0px;</span><br><span class="line">  height:0px;</span><br><span class="line">  border-top: 20px solid red;</span><br><span class="line">  border-right:20px solid transparent;</span><br><span class="line">  border-bottom:20px solid transparent;</span><br><span class="line">  border-left:20px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">20px</span> solid red;</span><br><span class="line">  <span class="attribute">border-right</span>:<span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-bottom</span>:<span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-left</span>:<span class="number">20px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="media%5Csanjiao.png"></p>
 <h3 id="1-2-圆角边框-CSS3"><a href="#1-2-圆角边框-CSS3" class="headerlink" title="1.2 圆角边框(CSS3)"></a>1.2 圆角边框(CSS3)</h3><p>从此以后，我们的世界不只有矩形。radius 半径（距离）</p>
@@ -489,7 +489,7 @@
 <li><p>其中每一个值可以为 数值或百分比的形式。 </p>
 </li>
 <li><p>技巧： 让一个正方形  变成圆圈 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius: 50%;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br></pre></td></tr></table></figure></li>
 <li><p>以上效果图矩形的圆角， 就不要用 百分比了，因为百分比会是表示高度和宽度的一半。</p>
 </li>
 <li><p>而我们这里矩形就只用 用 高度的一半就好了。精确单位。</p>
@@ -522,7 +522,7 @@
 <p>答案是：  其实他们大部分情况下是可以混用的。  就是说，你用内边距也可以，用外边距也可以。 你觉得哪个方便，就用哪个。</p>
 <p>但是，总有一个最好用的吧，我们根据稳定性来分，建议如下：</p>
 <p>按照 优先使用  宽度 （width）  其次 使用内边距（padding）    再次  外边距（margin）。   </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width &gt;  padding  &gt;   margin   </span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span> &gt;  <span class="attribute">padding</span>  &gt;   <span class="attribute">margin</span>   </span><br></pre></td></tr></table></figure>
 
 <p>原因：</p>
 <ol>
@@ -593,7 +593,7 @@
 <p><img src="media/left-right.png"></p>
 <h2 id="5-3-什么是浮动？"><a href="#5-3-什么是浮动？" class="headerlink" title="5.3 什么是浮动？"></a>5.3 什么是浮动？</h2><p>元素的浮动是指设置了浮动属性的元素会<strong>脱离标准普通流</strong>的控制，<strong>移动到其父元素中指定位置</strong>的过程。</p>
 <p>在CSS中，通过float属性来定义浮动，其基本语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;float:属性值;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;<span class="attribute">float</span>:属性值;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <table>
 <thead>
@@ -653,7 +653,7 @@
 
 <h2 id="6-3-清除浮动的方法"><a href="#6-3-清除浮动的方法" class="headerlink" title="6.3 清除浮动的方法"></a>6.3 清除浮动的方法</h2><p>其实本质叫做闭合浮动更好一些, 记住，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口不让他们出来影响其他元素。</p>
 <p>在CSS中，clear属性用于清除浮动，其基本语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;clear:属性值;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;<span class="attribute">clear</span>:属性值;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <table>
 <thead>
@@ -689,7 +689,7 @@
 
 <p>记忆法：code   hate   cv</p>
 <p>基本语法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zoom : normal | number </span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zoom : normal | number </span><br></pre></td></tr></table></figure>
 
 <p>语法取值<br>normal  :默认值。使用对象的实际尺寸<br>number  : 百分数 | 无符号浮点实数。浮点实数值为1.0或百分数为100%时相当于此属性的 normal 值<br>使用说明<br>设置或检索对象的缩放比例。设置或更改一个已被呈递的对象的此属性值将导致环绕对象的内容重新流动。</p>
 <p>优点： 符合闭合浮动思想  结构语义化正确</p>
@@ -989,9 +989,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="盒子模型">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">盒子模型</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
